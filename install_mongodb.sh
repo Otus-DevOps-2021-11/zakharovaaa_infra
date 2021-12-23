@@ -5,4 +5,4 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org apt-transport-https ca-certificates
 sudo systemctl start mongod
 sudo systemctl enable mongod
-#sudo systemctl status mongod
+sudo systemctl status mongod
