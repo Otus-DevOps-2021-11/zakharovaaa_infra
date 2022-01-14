@@ -15,9 +15,9 @@ variable private_key {
 }
 variable app_disk_image {
   description = "Disk image for reddit app"
-  default = "reddit-app-base"
+  default     = "reddit-app-base"
 }
 variable source_file {
   description = "Path to file with our app"
-  default = "files/puma.service"
+  default     = "files/puma.service"
 }

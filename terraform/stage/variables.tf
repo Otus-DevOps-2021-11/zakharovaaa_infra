@@ -35,16 +35,16 @@ variable ci_zone {
 }
 variable app_disk_image {
   description = "Disk image for reddit app"
-  default = "reddit-app-base"
+  default     = "reddit-app-base"
 }
 variable db_disk_image {
   description = "Disk image for reddit db"
-  default = "reddit-db-base"
+  default     = "reddit-db-base"
 }
 variable app_subnet_id {
   description = "Subnet"
 }
 variable source_file {
   description = "Path to file with our app"
-  default = "files/puma.service"
+  default     = "files/puma.service"
 }
