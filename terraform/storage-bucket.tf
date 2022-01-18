@@ -5,7 +5,7 @@ provider "yandex" {
   zone      = var.zone
 }
 module "app" {
-  source          = "../modules/app"
+  source          = "./modules/app"
   public_key_path = var.public_key_path
   private_key     = var.private_key
   app_disk_image  = var.app_disk_image
@@ -13,7 +13,7 @@ module "app" {
   source_file     = var.source_file
 }
 module "db" {
-  source          = "../modules/db"
+  source          = "./modules/db"
   public_key_path = var.public_key_path
   db_disk_image   = var.db_disk_image
   subnet_id       = var.subnet_id
