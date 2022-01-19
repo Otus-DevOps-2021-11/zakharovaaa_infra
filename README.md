@@ -1,3 +1,12 @@
+# домашнее задание к лекции 9
+с помощью Packer созданы два новых образа для сервера БД и сервера приложения.
+с помощью модулей Terraform создано 2 ВМ в Yandex Cloud: сервер БД и сервер приложения; и два окружения stage и prod; модули параметризированы.
+Пример вывода в консоли после успешного создания при последней проверке:
+module.app.yandex_compute_instance.app: Creation complete after 3m9s [id=epdmhsu2luqv3frdes5r]
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+Outputs:
+external_ip_address_app = 51.250.27.45
+external_ip_address_db = 51.250.3.250
 # домашнее задание к лекции 8
 с помощью Terraform создана ВМ в Yandex Cloud, в описании часть значений вынесено в input-переменные, использованы провижинеры для деплоя последней версии приложения на созданную ВМ
 запущенное приложение можно проверить по адресу
