@@ -1,14 +1,15 @@
 ---
 - name: Configure app host
-  hosts: app
+  hosts: all
   become: true
   tasks:
+    - name: Sleep for 60 seconds and continue with play
+      wait_for:
+        timeout: 60
+
     - name: Install ruby
-      apt:
-        name: "{{ item }}"
-        state: present
-        update_cache: yes
-      loop:
-          - ruby-full
-          - ruby-bundler
-          - build-essential
+      apt: "name={{ item }} state=present"
+      with_items:
+        - ruby-full
+        - ruby-bundler
+        - build-essential
